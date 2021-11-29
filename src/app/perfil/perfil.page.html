@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullScreen]="true">
+ <ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Datos</ion-card-subtitle>
+    <ion-card-title>{{formControlName}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+   Quia delectus et ducimus nihil, optio libero dolorem nam quod obcaecati 
+   laudantium omnis temporibus nesciunt incidunt ipsam quidem impedit officia. Est, autem!
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-icon name="pin" slot="start"></ion-icon>
+    <ion-label>Ubicacion / Direccion</ion-label>
+    <ion-button  fill="outline"(click)="navigateLocation()">View</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    Geolocalizacion
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item routerLink="/asignaturas" class="ion-activated">
+    <ion-icon name="book" slot="start"></ion-icon>
+    <ion-label>Asignaturas</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/asistencia">
+    <ion-icon name="checkbox" slot="start"></ion-icon>
+    <ion-label>Asistencia</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="#">
+    <ion-icon name="time-outline" slot="start"></ion-icon>
+    <ion-label>Horario</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/camara" class="ion-activated">
+    <ion-icon name="camera" slot="start"></ion-icon>
+    <ion-label >Camara</ion-label>
+  </ion-item>
+</ion-card>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Asignatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngFor="let asignatura of listaAsignaturas">
+    <ion-item [routerLink]="['/detail/', asignatura.id]">
+      <ion-avatar slot="start" >
+          <ion-img src="assets/img/avatar.jpg"></ion-img>
+        </ion-avatar>
+      {{asignatura.id}} {{asignatura.nombre}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

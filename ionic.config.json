@@ -1,0 +1,7 @@
+{
+  "name": "AppRegist",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

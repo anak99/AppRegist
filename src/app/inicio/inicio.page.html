@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+   </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-icon name="person"></ion-icon>
+      <ion-text>
+        <h1>Bienvenido</h1>
+      </ion-text>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color ="danger" routerLink="/camera">
+          <ion-icon name="camera"></ion-icon>
+        <ion-text>
+          <h3>Camara</h3>
+        </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color ="danger" routerLink="/asistencia">
+          <ion-icon name="checkbox"></ion-icon>
+        <ion-text>
+          <h3>Asistencia</h3>
+        </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color ="danger" routerLink="/asignaturas">
+          <ion-icon name="book"></ion-icon>
+        <ion-text>
+          <h3>Asignaturas</h3>
+        </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color ="danger" routerLink="/perfil">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-text>
+          <h3>Perfil</h3>
+        </ion-text>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

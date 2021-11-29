@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Geolocalizacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <p>Lat: {{lat}}, Lng: {{lng}}</p>
+    <ion-button (click)="whereIam()">Where I am?</ion-button>
+  </div>
+</ion-content>

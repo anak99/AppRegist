@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img class="logo-duoc" src="assets/img/DUOC-UC.PNG" width="123" height="43" />
+      ASISTENCIA CHECK
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <center><p>Asistencia Check, es una aplicacion que ayuda a que los propios alumnos de DuocUc puedan 
+    registrar su asistencia de las asignaturas que cursan</p></center>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="12" class="ion-text-center">
+      <ion-button [routerLink]="['/login']" routerDirectio="forward">Ingresar</ion-button>
+      <ion-button [routerLink]="['/registro']" routerDirectio="forward">Crear Usuario</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
