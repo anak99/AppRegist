@@ -1,5 +1,5 @@
 export interface Asignatura{
-    id: string;
+    id?: string;
     nombre: string;
     docente: string;
     horario: string;

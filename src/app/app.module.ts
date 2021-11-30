@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
-import { DataBaseService } from './servicios/database.service';
+import { DetailAsignaturaService} from './servicios/detail-asignatura.service'
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
@@ -31,5 +31,5 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
   bootstrap: [AppComponent],
 })
 export class AppModule {
- constructor(db: DataBaseService){}
+ constructor(){}
 }

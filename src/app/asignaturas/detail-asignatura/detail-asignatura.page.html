@@ -1,32 +1,31 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/asignaturas"></ion-back-button>
+      <ion-back-button routerDirection="back"></ion-back-button>
     </ion-buttons>
-    <ion-title>Informacion Asignatura</ion-title>
+    <ion-title>Informacion Docentes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class='card'>
-
   <ion-card-content>
-
-      <ion-item lines="full">
-        <ion-label position="floating">Nombre</ion-label>
-        <ion-input type="text" [(ngModel)]="asignatura.nombre"></ion-input>
-      </ion-item> 
-
-    <ion-item lines="full">
-      <ion-label position="floating">Docente</ion-label>
-      <ion-input type="text" [(ngModel)]="asignatura.docente"></ion-input>
-    </ion-item>
-
-    <ion-item lines="full">
-        <ion-label position="floating">Horario</ion-label>
-        <ion-input type="text" [(ngModel)]="asignatura.horario"></ion-input>
-    </ion-item>  
-
-    <ion-button routerLink="/asistencia" routerDirection="back">Registrar Asistencia</ion-button>
+    <table class="table table-border table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let info of info">
+          <th scope="row">{{info.id}}</th>
+          <td>{{info.name}}</td>
+          <td>{{info.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ion-button routerLink="/asistencia" >Registrar Asistencia</ion-button>
  </ion-card-content> 
 </ion-content>
 

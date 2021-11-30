@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform, AlertController } from '@ionic/angular';
+import { DetailAsignaturaService } from './servicios/detail-asignatura.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Platform, AlertController } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+ 
+
+  constructor() {
+   
+   
+  }
 }

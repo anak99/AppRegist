@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AsignaturasPage } from './asignaturas.page';
 import { Asignatura } from './asignaturas.model';
-import { DataBaseService } from '../servicios/database.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AsignaturaService {
-
-  db: DataBaseService;
 
   listaAsignaturas : Asignatura[]=[
     {
@@ -24,7 +22,7 @@ export class AsignaturaService {
     horario:"Viernes y Miercoles"
   }
 ];
-constructor( db: DataBaseService) {this.db=db;}
+constructor() {}
 
 getAsignaturas()
 {

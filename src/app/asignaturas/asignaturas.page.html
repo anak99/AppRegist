@@ -3,19 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Asignatura</ion-title>
+    <ion-title> Asignaturas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-  <ion-list *ngFor="let asignatura of listaAsignaturas">
-    <ion-item [routerLink]="['/detail/', asignatura.id]">
-      <ion-avatar slot="start" >
-          <ion-img src="assets/img/avatar.jpg"></ion-img>
+  <div class="list-group" *ngFor="let asignatura of listaAsignaturas">
+    <ion-item [routerLink]="['/detail/', asignatura.id]" class="list-group-item" aria-current="true">
+        <ion-avatar slot="start" >
+          <img src="assets/img/student.png">
         </ion-avatar>
-      {{asignatura.id}} {{asignatura.nombre}}
+        {{asignatura.id}} {{asignatura.nombre}}
     </ion-item>
-  </ion-list>
-
+  </div>
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Asignatura} from '../asignaturas.model'
-import { AsignaturaService } from '../asignaturas.service';
+import { DetailAsignaturaService } from 'src/app/servicios/detail-asignatura.service';
 
 
 @Component({
@@ -10,18 +10,16 @@ import { AsignaturaService } from '../asignaturas.service';
   styleUrls: ['./detail-asignatura.page.scss'],
 })
 export class DetailAsignaturaPage implements OnInit {
-asignatura: Asignatura;
+  public info: Array<any> = []
 
   constructor(private activateRoute: ActivatedRoute, 
-    private asignaturaService: AsignaturaService) { }
+    private detailasignaturaService:DetailAsignaturaService) { }
 
   ngOnInit() {
-    this.activateRoute.paramMap.subscribe(
-      paramMap=>{
-        const idAsignaturaRecibido=paramMap.get('asignaturaId');
-        this.asignatura=this.asignaturaService.getAsignatura(idAsignaturaRecibido);
-      }
-    );
+    this.detailasignaturaService.getInfo().subscribe((resp :any)=>{
+      console.log(resp)
+      this.info = resp
+    })
   }
 
 }
